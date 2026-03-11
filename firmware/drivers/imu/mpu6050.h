@@ -7,10 +7,6 @@ extern "C" {
 
 #include <stdint.h>
 
-/*
- * IMU data structure
- * All values are in physical units
- */
 typedef struct
 {
     float ax;
@@ -23,18 +19,9 @@ typedef struct
 
 } imu_data_t;
 
+int mpu6050_init(void);
 
-/*
- * Initialize MPU6050
- */
-void mpu6050_init(void);
-
-
-/*
- * Read all IMU data
- */
-void mpu6050_read_all(imu_data_t *imu);
-
+int mpu6050_read_all(imu_data_t *imu);
 
 #ifdef __cplusplus
 }
