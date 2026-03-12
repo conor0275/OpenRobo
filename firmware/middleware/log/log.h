@@ -1,14 +1,15 @@
 #ifndef LOG_H
 #define LOG_H
 
-#ifdef __cplusplus
-extern "C" {
-#endif
+#include <stdio.h>
 
-void log_info(const char *fmt, ...);
+#define LOG_INFO(fmt, ...) \
+    printf("[INFO] " fmt, ##__VA_ARGS__)
 
-#ifdef __cplusplus
-}
-#endif
+#define LOG_WARN(fmt, ...) \
+    printf("[WARN] " fmt, ##__VA_ARGS__)
+
+#define LOG_ERROR(fmt, ...) \
+    printf("[ERROR] " fmt, ##__VA_ARGS__)
 
 #endif

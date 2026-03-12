@@ -1,20 +1,13 @@
-OpenRobo Architecture
+# OpenRobo Architecture
 
-Layered architecture:
+System layers:
 
-Application Layer
-Robot application logic
+Application
+Algorithm
+Middleware
+Driver
+Hardware
 
-Algorithm Layer
-Control algorithms
-Attitude estimation
-
-Middleware Layer
-FreeRTOS
-Logging
-
-Driver Layer
-Sensor drivers
-
-Hardware Layer
-STM32 peripherals
+The system is built on FreeRTOS.
+Sensors are abstracted through sensor interfaces.
+Algorithms are hardware independent.

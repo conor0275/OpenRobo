@@ -1,21 +1,13 @@
 #include "board.h"
-
 #include "main.h"
-#include "i2c.h"
-#include "usart.h"
-#include "gpio.h"
 
-/*
- * Board initialization
- * Calls CubeMX generated init functions
- */
 void board_init(void)
 {
-    HAL_Init();
+    /*
+    未来可在这里初始化
 
-    SystemClock_Config();
-
-    MX_GPIO_Init();
-    MX_I2C1_Init();
-    MX_USART1_UART_Init();
+    LED
+    GPIO
+    外设
+    */
 }
